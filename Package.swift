@@ -1,4 +1,5 @@
-// swift-tools-version:5.3
+// swift-tools-version: 5.9
+
 import PackageDescription
 
 let package = Package(
@@ -9,16 +10,14 @@ let package = Package(
     products: [
         .library(
             name: "MapplsDirectionUI",
-            targets: ["MapplsDirectionUI"])
-    ],
-    dependencies: [
-        
+            targets: ["MapplsDirectionUI"]
+        )
     ],
     targets: [
         .binaryTarget(
             name: "MapplsDirectionUI",
-            url: "https://mmi-api-team.s3.amazonaws.com/Mappls-SDKs/iOS_Legacy_Auth/MapplsDirectionUI/MapplsDirectionUI.xcframework-1.0.10.zip",
-            checksum: "771efb41200b0f2092fbacac73fac3ffa525103b202f197b22a214c222f355eb"
+            url: "https://mmi-api-team.s3.amazonaws.com/Mappls-SDKs/iOS_Legacy_Auth/MapplsDirectionUI/MapplsDirectionUI.xcframework-1.0.11.zip",
+            checksum: "148ea26931c2698d34e04c5ac4808537c31247aa280f9e1257039b14be99bb0b"
         )
     ]
 )
