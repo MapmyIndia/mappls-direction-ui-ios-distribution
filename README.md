@@ -85,6 +85,24 @@ Below is the list of dependencies which are required to run this SDK:
 ### [MapplsAPICore](#MapplsAPICore)
 It is required to set MAPPLS's keys to use any MAPPL's SDK. Please see [here](MapplsAPICore.md) to achieve this.
 
+## [Location Permission](#Location-Permission)
+
+MapplsDirectionUI uses the device's location to set the current location as the origin and to center the map. To request location access, add the following keys to your app's `Info.plist` with a short description of why your app needs location:
+
+```xml
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Your location is used to set your starting point and show directions.</string>
+```
+
+If your app also needs location access while running in the background, add:
+
+```xml
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>Your location is used to set your starting point and show directions.</string>
+```
+
+Without these keys, iOS silently denies the location request and the SDK falls back to manual source selection.
+
 ## [Usage](#Usage)
 
 The MapplsDirectionUI makes it easy to integrate Route from MapplsAPIKit SDK to your iOS application. It gives you all the tools you need to add Directions related UI components to your application.
